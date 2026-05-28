@@ -20,18 +20,18 @@
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);padding:28px 24px;}
- 
+
   .header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border);}
   .header h1{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#fff;line-height:1.1;}
   .header h1 span{color:var(--purple-light);}
   .header-meta{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-top:4px;}
   .event-pill{background:var(--purple);color:#fff;font-family:'Syne',sans-serif;font-weight:800;font-size:12px;padding:7px 16px;border-radius:999px;white-space:nowrap;}
- 
+
   .goals{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px;}
   .goal-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:8px;}
   .goal-num{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--purple-light);line-height:1;white-space:nowrap;}
   .goal-desc{font-size:10px;color:var(--muted);line-height:1.3;}
- 
+
   .legend{display:flex;gap:12px;margin-bottom:12px;align-items:center;flex-wrap:wrap;}
   .legend-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;}
   .legend-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text);}
@@ -44,16 +44,16 @@
   .leg-dot.ooh{background:var(--ooh);border-radius:2px;}
   .leg-dot.exp{background:var(--exp);}
   .leg-arrow{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);}
- 
+
   .filters{display:flex;gap:5px;margin-bottom:18px;flex-wrap:wrap;align-items:center;}
   .filter-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-right:4px;}
   .filter-btn{font-family:'DM Mono',monospace;font-size:10px;padding:3px 8px;border-radius:4px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;transition:all .12s;}
   .filter-btn.active{border-color:var(--purple-light);color:var(--purple-light);background:var(--purple-dim);}
   .filter-btn:hover{border-color:var(--purple-light);color:var(--purple-light);}
- 
+
   .cal-wrap{overflow-x:auto;}
   .cal{border-collapse:separate;border-spacing:0;width:100%;min-width:900px;}
- 
+
   /* header */
   .cal th.corner{background:transparent;border:none;width:92px;}
   .cal th.wk{background:var(--surface);border:1px solid var(--border);border-left:none;padding:5px 3px;text-align:center;}
@@ -65,13 +65,13 @@
   .wk-date{font-family:'DM Mono',monospace;font-size:10px;color:var(--text);margin-top:1px;}
   .cal th.wk.event-wk .wk-date{color:var(--purple-light);}
   .cal th.wk.post-wk .wk-date{color:#38bdf8;}
- 
+
   /* phase row */
   .cal tr.phase-row td{font-family:'DM Mono',monospace;font-size:8px;text-transform:uppercase;letter-spacing:.7px;padding:3px 4px;text-align:center;background:var(--purple-dim);border-top:2px solid var(--purple);color:var(--purple-light);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .cal tr.phase-row td.blank{background:transparent;border-top:1px solid var(--border);color:transparent;}
   .cal tr.phase-row td.post-ph{background:#0e1520;border-top-color:#1a3a5c;color:#38bdf8;}
   .cal tr.phase-row td.corner-ph{background:transparent;border:none;}
- 
+
   /* channel rows */
   .cal td.ch-label{background:var(--surface);border:1px solid var(--border);border-top:none;border-right:none;padding:4px 6px;text-align:right;vertical-align:top;white-space:nowrap;}
   .ch-tag{font-family:'DM Mono',monospace;font-size:8px;padding:2px 5px;border-radius:3px;white-space:nowrap;}
@@ -88,13 +88,13 @@
   .tag-ooh{background:var(--ooh-dim);color:var(--ooh);}
   .tag-experiential{background:var(--exp-dim);color:var(--exp);}
   .tag-jesse{background:#1a1a00;color:#facc15;}
- 
+
   .cal td.week-cell{border:1px solid var(--border);border-left:none;border-top:none;padding:2px 2px;vertical-align:top;min-width:52px;}
   .cal td.week-cell.event-col{background:#0f0b22;border-color:#3d2070;}
   .cal td.week-cell.today-col{background:#0d0b1e;}
   .cal td.week-cell.post-col{background:#090d18;border-color:#152035;}
   .cal td.week-cell:hover{background:var(--surface);}
- 
+
   /* event blocks */
   .ev{border-radius:3px;padding:2px 4px;font-size:9px;line-height:1.3;cursor:pointer;margin-bottom:2px;border-left:2px solid transparent;transition:opacity .12s;position:relative;}
   .ev:hover{opacity:.8;}
@@ -106,19 +106,19 @@
   .ev.ooh{background:var(--ooh-dim);border-left-color:var(--ooh);color:#fef08a;}
   .ev.exp{background:var(--exp-dim);border-left-color:var(--exp);color:#ffb3cc;}
   .ev.filtered-out{opacity:.05;pointer-events:none;}
- 
+
   /* arrow extension — shown on blocks that continue into next weeks */
   .ev.extends::after{content:'→';position:absolute;right:2px;top:50%;transform:translateY(-50%);font-size:9px;opacity:.7;}
   .ev.continues{border-left-style:dashed;opacity:.6;}
   .ev.continues::before{content:'';position:absolute;left:-2px;top:0;bottom:0;width:2px;}
- 
+
   /* intensity dot for paid channels */
   .intensity-pip{display:inline-block;width:5px;height:5px;border-radius:50%;margin-right:3px;vertical-align:middle;flex-shrink:0;}
- 
+
   .ev-name{font-weight:500;font-size:9px;display:flex;align-items:center;gap:2px;}
- 
+
   .event-day-marker{background:var(--purple);color:#fff;font-family:'Syne',sans-serif;font-size:8px;font-weight:700;padding:2px 4px;border-radius:3px;text-align:center;margin-bottom:2px;}
- 
+
   .tooltip{display:none;position:fixed;background:#1a1535;border:1px solid var(--purple);border-radius:8px;padding:11px 13px;z-index:9999;max-width:240px;pointer-events:none;box-shadow:0 8px 32px rgba(0,0,0,.6);}
   .tooltip.visible{display:block;}
   .tt-date{font-family:'DM Mono',monospace;font-size:9px;color:var(--purple-light);margin-bottom:3px;}
@@ -126,12 +126,12 @@
   .tt-note{font-size:10px;color:#b0a8d8;line-height:1.5;}
   .tt-spend{margin-top:5px;font-family:'DM Mono',monospace;font-size:9px;}
   .tt-duration{font-family:'DM Mono',monospace;font-size:9px;color:var(--muted);margin-top:3px;}
- 
+
   .footer{margin-top:16px;padding-top:12px;border-top:1px solid var(--border);font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);display:flex;justify-content:space-between;}
 </style>
 </head>
 <body>
- 
+
 <div class="header">
   <div>
     <h1>Regal User Conference — <span>Media Calendar V5</span></h1>
@@ -139,14 +139,14 @@
   </div>
   <div class="event-pill">★ SEP 17</div>
 </div>
- 
+
 <div class="goals">
   <div class="goal-card"><div class="goal-num">400</div><div class="goal-desc">Total registrations</div></div>
   <div class="goal-card"><div class="goal-num">36</div><div class="goal-desc">ICP attendees needed</div></div>
   <div class="goal-card"><div class="goal-num">60/40</div><div class="goal-desc">Net new / existing</div></div>
   <div class="goal-card"><div class="goal-num">4</div><div class="goal-desc">SQL goal</div></div>
 </div>
- 
+
 <div class="legend">
   <span class="legend-label">Spend:</span>
   <div class="legend-item"><span class="leg-dot low"></span>Low</div>
@@ -158,7 +158,7 @@
   <div class="legend-item"><span class="leg-dot exp"></span>Experiential</div>
   <div class="legend-item" style="margin-left:8px;"><span class="leg-arrow">→</span>&nbsp;continues next week</div>
 </div>
- 
+
 <div class="filters">
   <span class="filter-label">Filter:</span>
   <button class="filter-btn active" data-ch="all">All</button>
@@ -176,11 +176,11 @@
   <button class="filter-btn" data-ch="ooh">OOH</button>
   <button class="filter-btn" data-ch="experiential">Experiential</button>
 </div>
- 
+
 <div class="cal-wrap">
   <table class="cal" id="cal"></table>
 </div>
- 
+
 <div class="tooltip" id="tt">
   <div class="tt-date" id="tt-date"></div>
   <div class="tt-title" id="tt-title"></div>
@@ -188,12 +188,12 @@
   <div class="tt-spend" id="tt-spend"></div>
   <div class="tt-duration" id="tt-duration"></div>
 </div>
- 
+
 <div class="footer">
   <span>Regal.ai Growth Marketing &nbsp;·&nbsp; V5 &nbsp;·&nbsp; → = activity continues into following week(s)</span>
   <span>Review with Eliza before finalizing</span>
 </div>
- 
+
 <script>
 const WEEKS = [
   {i:0,  lbl:"W1",  date:"May 26", phase:"P1: FOUNDATION",  today:true},
@@ -215,7 +215,7 @@ const WEEKS = [
   {i:16, lbl:"POST",date:"Sep 18+",phase:"POST-EVENT", post:true},
 ];
 const N = WEEKS.length;
- 
+
 // Events: week = start week, endWeek = last week it runs (shows → arrow on intermediate weeks)
 // If endWeek > week, intermediate cells show a "continues" stub with arrow
 const EVENTS = [
@@ -226,34 +226,34 @@ const EVENTS = [
   {ch:"milestone", week:7,  cls:"ms", name:"SPEAKER CONFIRMED — all-channel drop", note:"Hinge of the calendar. Everything else can flex. This cannot.", spend:""},
   {ch:"milestone", week:15, cls:"ms", name:"★ EVENT DAY Sep 17", note:"36 ICP in room. 24 net new + 12 existing customers. 4 SQLs to follow.", spend:""},
   {ch:"milestone", week:16, cls:"ms", name:"Sales handoff — 24 net new ICP to reps", note:"SQL goal lives here. Each rep gets: attendee name, company, sessions attended, noted interests.", spend:""},
- 
+
   // PR
   {ch:"pr", week:0,  cls:"pr", name:"Draft PR target list", note:"CX Today, No Jitter, Fierce Telecom, CCW. Brief writer for custom article.", spend:"Low"},
   {ch:"pr", week:4,  cls:"pr", name:"Pitch trade press — conference announcement", note:"Angle: first Regal user conference = category maturity signal.", spend:"Low"},
   {ch:"pr", week:5,  cls:"pr", name:"Custom article publishes", note:"Timed to awareness phase. Reinforces event as a category moment, not just a vendor event.", spend:"Low"},
   {ch:"pr", week:16, cls:"pr", name:"Post-event recap pitch to press", note:"Attendance numbers, speaker highlights, standout moments. Extends event life in media.", spend:"Low"},
- 
+
   // OOH
   {ch:"ooh", week:8,  cls:"ooh", name:"Times Sq — 15 sec slot (1 day)", note:"One-day buy. 15-second creative. Jesse clips it for social content — this is primarily a content play, not an awareness buy.", spend:"Low (existing buy — FREE)", endWeek:8},
- 
+
   // EXPERIENTIAL
   {ch:"experiential", week:8,  cls:"exp", name:"VIP dinner planning locked", note:"Top 10-15 target accounts. Personal invites from sales. Night of Sep 16. SQL conversations start here.", spend:"High"},
   {ch:"experiential", week:10, cls:"exp", name:"On-site content plan locked w/ Jesse", note:"What shots needed, social-worthy moments, who films what. Must be planned now not day-of.", spend:"Low"},
   {ch:"experiential", week:14, cls:"exp", name:"VIP dinner — Sep 16 night before", note:"Curated, personal. Sales attends. No hard pitch.", spend:"High"},
   {ch:"experiential", week:15, cls:"exp", name:"Demo station + vertical roundtables", note:"Pull-based demo (not a booth). Roundtables by vertical create natural peer conversations.", spend:"High"},
- 
+
   // LINKEDIN ADS
   {ch:"linkedin", week:3,  cls:"med", endWeek:6,  name:"Awareness — existing ABM audiences", note:"Seed retargeting pool with existing ABM audiences. Save the date creative. Not a hard reg push yet.", spend:"", intensity:"low"},
   {ch:"linkedin", week:7,  cls:"high", endWeek:9, name:"Registration creative — speaker-led", note:"Speaker-led creative. Direct CTA. Retargeting live for all page visitors + email clickers.", spend:"", intensity:"med"},
   {ch:"linkedin", week:10, cls:"high", endWeek:12,name:"Peak spend — urgency + retargeting max", note:"Peak window. Urgency creative. Retarget all engagers.", spend:"", intensity:"high"},
   {ch:"linkedin", week:13, cls:"med", endWeek:14, name:"Wind down — retargeting only", note:"No cold audience spend. Retargeting only. Conserve for post-event.", spend:"", intensity:"low"},
   {ch:"linkedin", week:16, cls:"med", name:"Post-event — retarget no-shows w/ recap", note:"'Missed it? Here's what happened.' Drive to gated recap video.", spend:"", intensity:"low"},
- 
+
   // SEM
   {ch:"sem", week:3,  cls:"med", endWeek:7,  name:"SEM activates — branded + intent keywords", note:"Branded: own all Regal + event searches. Intent: 'AI contact center conference,' 'voice AI summit 2026.' Both drive to event LP only.", spend:"", intensity:"low"},
   {ch:"sem", week:8,  cls:"med", endWeek:12, name:"Ramps with registration push", note:"Steps up in line with LinkedIn. Branded protection + intent layer.", spend:"", intensity:"med"},
   {ch:"sem", week:13, cls:"low", endWeek:15, name:"Branded protection only", note:"Last mile — own all brand searches. No intent spend needed this close.", spend:"", intensity:"low"},
- 
+
   // EMAIL
   {ch:"email", week:0,  cls:"low", endWeek:1, name:"Build Marketo nurture tracks", note:"Two sequences: net new (4-5 emails) and existing customers (2-3 emails). Separate from day one.", spend:"Setup"},
   {ch:"email", week:3,  cls:"low", name:"Wave 1 — net new enter nurture sequence", note:"First email in 4-5 step nurture. Curiosity-led. Not a hard registration push.", spend:"Low"},
@@ -267,7 +267,7 @@ const EVENTS = [
   {ch:"email", week:14, cls:"low", name:"Logistics nurture — registered attendees", note:"Venue, agenda, what to bring, travel reimbursement instructions.", spend:"Low"},
   {ch:"email", week:15, cls:"low", name:"Same-day thank you (send within hours)", note:"Warm, personal. No hard sell. Sets tone for follow-up sequence.", spend:"Low"},
   {ch:"email", week:16, cls:"low", endWeek:16, name:"No-show sequence begins", note:"'You missed it — here's what happened.' Links to recap when live.", spend:"Low"},
- 
+
   // SOCIAL
   {ch:"social", week:3,  cls:"low", name:"LAUNCH: First post + Blog #1 live", note:"Jun 11 — soft tease, link to registration. Blog publishes same day for a fuller moment.", spend:"Organic"},
   {ch:"social", week:4,  cls:"low", name:"Post #2 — 'Who this is built for'", note:"ICP-focused. Speaks to the contact center / AI ops leader. 2x/week cadence.", spend:"Organic"},
@@ -279,7 +279,7 @@ const EVENTS = [
   {ch:"social", week:10, cls:"high",endWeek:14, name:"3-4x/week — urgency + countdown", note:"Speaker quotes, agenda teasers, countdown, testimonials. Mix content so CTA is one of many.", spend:"Organic"},
   {ch:"social", week:15, cls:"high",name:"Live event coverage — day-of posts", note:"Real-time posts. Speaker quotes, crowd energy, demo moments. Tag attendees.", spend:"Organic"},
   {ch:"social", week:16, cls:"med", endWeek:16, name:"Post-event series — highlights + stats", note:"4-6 posts over 2 weeks. Extend event life on social. Tag speakers and attendees.", spend:"Organic"},
- 
+
   // JESSE / VIDEO
   {ch:"jesse", week:3,  cls:"low", name:"Teaser video — 'something is coming'", note:"Short-form. No specifics yet. Behind-the-scenes energy. Social-first.", spend:"Low"},
   {ch:"jesse", week:7,  cls:"med", name:"Speaker announcement video", note:"Short clip featuring the speaker. Social-first. Coordinate with speaker availability.", spend:"Low"},
@@ -287,29 +287,30 @@ const EVENTS = [
   {ch:"jesse", week:12, cls:"low", endWeek:14, name:"Countdown series begins", note:"Short-form every 2-3 days in final 4 weeks. Build public anticipation.", spend:"Low"},
   {ch:"jesse", week:15, cls:"high",name:"Live event capture — video + photo", note:"Every key moment documented. Speaker clips, crowd, demo station. 60 days of content.", spend:"Low"},
   {ch:"jesse", week:16, cls:"med", name:"Recap highlight reel (10-day target)", note:"Gated on event LP. Captures no-shows as leads. 60-90 second cut.", spend:"Med"},
- 
+
   // CONTENT
   {ch:"content", week:1,  cls:"low", name:"Begin Blog Post #1", note:"'Why we built this event.' SEO foundation. Target publish Jun 11 with first social post.", spend:"Low"},
   {ch:"content", week:3,  cls:"low", name:"Blog #1 publishes (w/ first social post)", note:"Pushed on social + LinkedIn Groups. Links from event page.", spend:"Low"},
   {ch:"content", week:8,  cls:"low", name:"Blog #2 — Speaker spotlight", note:"SEO + social amplification. Boosted on LinkedIn paid.", spend:"Low"},
   {ch:"content", week:10, cls:"low", name:"Blog #3 — Vertical ICP angle", note:"Healthcare / Insurance / BPO. Pain-point led. Boosted via LinkedIn to vertical audience.", spend:"Low"},
- 
+
   // DIRECT MAIL
   {ch:"directmail", week:0,  cls:"med", name:"Brief vendor — booklet specs", note:"Premium booklet: Regal story, why AI contact center matters, event save the date. Confirm lead times.", spend:"Med"},
   {ch:"directmail", week:4,  cls:"high",name:"ORDER PLACED — booklet to top 50 ICP", note:"Sends BEFORE speaker confirmed. Booklet does the brand heavy lifting. Speaker drop is the follow-up.", spend:"High"},
- 
+
   // INFLUENCER
   {ch:"influencer", week:4,  cls:"med", name:"Shep outreach — pitch partnership", note:"LinkedIn contact center influencer. Confirm paid vs organic before locking timing.", spend:"Med"},
   {ch:"influencer", week:8,  cls:"med", name:"Shep post — PLACEHOLDER", note:"Timed to compound with speaker drop week. Confirm fee before locking.", spend:"Med"},
   {ch:"influencer", week:12, cls:"med", name:"Newsletter sponsorship — PLACEHOLDER", note:"CX Today / No Jitter. 3-4 weeks out is ideal placement for an event.", spend:"Med"},
- 
+
   // INTERNAL
   {ch:"internal", week:3,  cls:"low", name:"Employee activation Wave 1", note:"All Regal employees post on LinkedIn same day. Provide copy template in Slack. Coordinated = algorithm boost.", spend:"Low"},
+  {ch:"internal", week:6,  cls:"high", name:"BDR cadences go live — event outreach", note:"Structured BDR sequence targeting net new ICP accounts. Personalized to event. Coordinate with sales on messaging and account list before launch.", spend:"Low", endWeek:12},
   {ch:"internal", week:6,  cls:"low", name:"Employee activation Wave 2", note:"Fresh copy. 'Something big is coming.' Second coordinated push.", spend:"Low"},
   {ch:"internal", week:10, cls:"low", name:"Employee activation Wave 3 — urgency", note:"'Spots are filling.' Third push.", spend:"Low"},
   {ch:"internal", week:14, cls:"low", name:"Employee activation Wave 4 — final hype", note:"'See you Wednesday.' All employees. Build public anticipation.", spend:"Low"},
 ];
- 
+
 const CHANNELS = [
   {key:"milestone",    label:"MILESTONES",      tag:"tag-milestone"},
   {key:"pr",           label:"PR / MEDIA",       tag:"tag-pr"},
@@ -325,9 +326,9 @@ const CHANNELS = [
   {key:"influencer",   label:"INFLUENCER / NL",  tag:"tag-influencer"},
   {key:"internal",     label:"INTERNAL",         tag:"tag-internal"},
 ];
- 
+
 const cal = document.getElementById('cal');
- 
+
 // Header row
 const thead = cal.createTHead();
 const hr = thead.insertRow();
@@ -340,9 +341,9 @@ WEEKS.forEach(w => {
   th.innerHTML = `<div class="wk-label">${w.lbl}${w.today?' · NOW':''}</div><div class="wk-date">${w.date}</div>`;
   hr.appendChild(th);
 });
- 
+
 const tbody = cal.createTBody();
- 
+
 // Phase row
 const pr = tbody.insertRow();
 pr.className = 'phase-row';
@@ -360,7 +361,7 @@ WEEKS.forEach(w => {
     td.textContent = '.';
   }
 });
- 
+
 // Tooltip helpers
 function showTT(e, ev, w) {
   document.getElementById('tt-date').textContent = w.date + (ev.endWeek !== undefined && ev.endWeek > ev.week ? ` → ${WEEKS[Math.min(ev.endWeek, N-1)].date}` : '');
@@ -377,25 +378,25 @@ function moveTT(e) {
   tt.style.top = (e.clientY-10)+'px';
 }
 function hideTT() { document.getElementById('tt').classList.remove('visible'); }
- 
+
 // Channel rows
 CHANNELS.forEach(ch => {
   const row = tbody.insertRow();
   const labelTd = row.insertCell();
   labelTd.className = 'ch-label';
   labelTd.innerHTML = `<span class="ch-tag ${ch.tag}">${ch.label}</span>`;
- 
+
   WEEKS.forEach((w, wi) => {
     const td = row.insertCell();
     td.className = 'week-cell' + (w.event?' event-col':'') + (w.today?' today-col':'') + (w.post?' post-col':'');
- 
+
     if (w.event && ch.key === 'milestone') {
       const m = document.createElement('div');
       m.className = 'event-day-marker';
       m.textContent = '★ SEP 17';
       td.appendChild(m);
     }
- 
+
     // Find events where this week is within [week, endWeek]
     const cellEvts = EVENTS.filter(ev => {
       if (ev.ch !== ch.key) return false;
@@ -403,21 +404,21 @@ CHANNELS.forEach(ch => {
       const end = ev.endWeek !== undefined ? ev.endWeek : ev.week;
       return wi >= start && wi <= end;
     });
- 
+
     cellEvts.forEach(ev => {
       const isStart = wi === ev.week;
       const end = ev.endWeek !== undefined ? ev.endWeek : ev.week;
       const isEnd = wi === end;
       const isMiddle = !isStart && !isEnd;
       const spans = ev.endWeek !== undefined && ev.endWeek > ev.week;
- 
+
       const block = document.createElement('div');
       let cls = `ev ${ev.cls}`;
       if (spans && !isEnd) cls += ' extends';
       if (!isStart) cls += ' continues';
       block.className = cls;
       block.setAttribute('data-ch', ch.key);
- 
+
       if (isStart) {
         // show intensity pip for paid channels
         const pip = (ch.key === 'linkedin' || ch.key === 'sem') && ev.intensity ?
@@ -428,7 +429,7 @@ CHANNELS.forEach(ch => {
         // continuation cell — just show arrow
         block.innerHTML = `<div class="ev-name" style="opacity:.5;font-size:8px;">${isEnd ? '↳ ends' : '→ cont.'}</div>`;
       }
- 
+
       block.addEventListener('mouseenter', e => showTT(e, ev, WEEKS[ev.week]));
       block.addEventListener('mousemove', moveTT);
       block.addEventListener('mouseleave', hideTT);
@@ -436,7 +437,7 @@ CHANNELS.forEach(ch => {
     });
   });
 });
- 
+
 // Filter
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
